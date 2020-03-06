@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import { Button } from 'react-bootstrap';
-
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import './App.css';
 function App() {
 
     const [noteList, setNoteList] = useState ([
@@ -35,7 +36,7 @@ function App() {
     };
 
     return (
-        <div className="container">
+        <Container className="p-3">
             <ul>
             {
                 noteList.map(el => <div key={el._id}>
@@ -49,7 +50,7 @@ function App() {
             </ul>
             <input type="text" value={newNote}  placeholder='input new note' onChange={addNewNoteHandler}/>
             <button onClick={addNoteButtonHandler}>add</button>
-        </div>
+        </Container>
   );
 };
 
