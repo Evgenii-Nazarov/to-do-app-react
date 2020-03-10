@@ -65,7 +65,7 @@ function Note(props) {
 
                                 <Button variant='outline-primary' onClick={() => updateButtonHandler()}>update</Button>
 
-                                <Button variant='outline-danger' onClick={() => props.remove(props._id)}>delete</Button>
+                                <Button variant='outline-danger' onClick={() => props.remove(props._id,props.name)}>delete</Button>
 
                             </ButtonGroup>
                         </div>
